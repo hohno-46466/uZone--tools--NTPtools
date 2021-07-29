@@ -7,9 +7,17 @@
 
 NTPserver="ntp.nict.jp"
 
-(echo; sleep 0.1) \
-| gawk '{printf "%c", 35; for(i=0;i<47;i++){printf "%c", 0};fflush()}' \
-| nc -c -u ${NTPserver} 123 \
-| ptw hexdump \
-| gawk '{if($1=="0000000"){cnt=1}else{cnt++};if(cnt!=3){printf "%s ",$0}else{printf "%s\n",$0};fflush()}' \
-| gsed -u -e 's/00000[0-2]0 //g'
+# (echo ""; sleep 0.1) \
+
+gawk 'BEGIN{printf "%c", 35; for(i=0;i<47;i++){printf "%c", 0};fflush()} {}'< /dev/null \
+| /usr/bin/nc -w 1 -u ${NTPserver} 123 \
+| ptw hexdump -C \
+| head -3 \
+
+exit
+
+# | sed -e 's/00*[0-9]0 *//g' -e 's/ *|.*$//g' \
+# | gawk '{printf "%s ",$0; if (NR==3){printf "\n"}; fflush()}'
+
+exit
+
