@@ -5,7 +5,10 @@
 
 # Public domain
 
-ptw sed -e 's/00*[0-9]0 *//g' -e 's/ *|.*$//g' \
+ptw=ptw
+# ptw=$HOME/bin/ptw
+
+$ptw sed -e 's/00*[0-9]0 *//g' -e 's/ *|.*$//g' \
 | gawk '{tf+=NF;st=st" "$0; if(tf>=48){printf "%s\n",st; tf=0; st=""; fflush()}}' \
 | gawk ' {
   if (NF==48){

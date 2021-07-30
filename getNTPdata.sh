@@ -9,9 +9,15 @@
 
 NTPserver="ntp.nict.jp"
 
+nc=nc
+# nc=/bin/nc
+# nc=/usr/bin/nc
+ptw=ptw
+# ptw=$HOME/bin/ptw
+
 gawk 'BEGIN{printf "%c", 35; for(i=0;i<47;i++){printf "%c", 0};fflush()} {}' < /dev/null \
-| /usr/bin/nc -w 1 -u ${NTPserver} 123 \
-| ptw hexdump -C \
+| $nc -w 1 -u ${NTPserver} 123 \
+| $ptw hexdump -C \
 | head -3
 
 exit
