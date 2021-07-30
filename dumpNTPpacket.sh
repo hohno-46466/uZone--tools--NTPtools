@@ -6,7 +6,7 @@
 # Public domain
 
 ptw sed -e 's/00*[0-9]0 *//g' -e 's/ *|.*$//g' \
-| gawk '{tf+=NF;s = s " " $0; if (tf>=48) {printf "%s\n",s; tf=0; s="";fflush()}}' \
+| gawk '{tf+=NF;st=st" "$0; if(tf>=48){printf "%s\n",st; tf=0; st=""; fflush()}}' \
 | gawk ' {
   if (NF==48){
     printf "LI = %d\nVN = %d\nMode = %d\n"\
