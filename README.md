@@ -13,3 +13,10 @@
      └── unixTime2ISO8601time.sh
      
      1 directory, 9 files ( Fri 30 Jul 2021 09:28:43 PM JST )
+
+
+* Example: 
+
+    $ getNTPdata.sh | dumpNTPpacket.sh  | grep RecTime | awk '{print $3}' | NTPtime2unixTime.sh  | unixTime2humanReadableTime.sh 
+      20210717-221813
+

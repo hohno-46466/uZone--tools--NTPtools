@@ -7,4 +7,8 @@
 
 # Public domain
 
-gsed -e 's/\(3[0-9]\{9\}\)/$((\1 - 2208988800))/g'  -e 's/^/echo "/'  -e 's/$/"/' | sh
+# On macOS and BSD-like operating systems, you need to use GNU sed (gsed) instead of the standard sed.
+# gsed -e 's/\(3[0-9]\{9\}\)/$((\1 - 2208988800))/g'  -e 's/^/echo "/'  -e 's/$/"/' | sh
+
+# Linux
+sed -e 's/\(3[0-9]\{9\}\)/$((\1 - 2208988800))/g'  -e 's/^/echo "/'  -e 's/$/"/' | sh
