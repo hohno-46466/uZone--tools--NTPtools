@@ -9,21 +9,14 @@
 
 NTPserver="ntp.nict.jp"
 
-nc=nc
-# nc=/bin/nc
-# nc=/usr/bin/nc
-ptw=ptw
-# ptw=$HOME/bin/ptw
+exit_on_error() { echo "Error: $1 (ErrorCode = $2)"; exit $2; }
+
+[ "x$(which nc)" = "x" ]   && exit_on_error "Prepare nc command" 9
+[ "x$(which pxw)" = "x" ]  && exit_on_error "Prepare ptw command" 9 
+[ "x$(which gawk)" = "x" ] && exit_on_error "Prepare gawk command" 9 
 
 gawk 'BEGIN{printf "%c", 35; for(i=0;i<47;i++){printf "%c", 0};fflush()} {}' < /dev/null \
-| $nc -w 1 -u ${NTPserver} 123 \
-| $ptw hexdump -C \
+| nc -w 1 -u ${NTPserver} 123 \
+| ptw hexdump -C \
 | head -3
-
-exit
-
-# (echo ""; sleep 0.1)
-
-# | sed -e 's/00*[0-9]0 *//g' -e 's/ *|.*$//g' \
-# | gawk '{printf "%s ",$0; if (NR==3){printf "\n"}; fflush()}'
 
