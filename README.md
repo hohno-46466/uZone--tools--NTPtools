@@ -1,1 +1,3 @@
-# uZone--tools--NTPtools
+# GitHub/uZone--tools--NTPtools
+
+-EOF-
