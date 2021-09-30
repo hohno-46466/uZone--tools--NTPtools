@@ -1,18 +1,21 @@
 # GitHub/uZone--tools--NTPtools
 
-    /uZone--tools--NTPtools
-     ├── dumpNTPpacket.old
-     ├── dumpNTPpacket.sh
-     ├── getNTPdata.old
-     ├── getNTPdata.sh
-     ├── NTPtime2unixTime.sh
-     ├── ptw
-     │   └── ptw.c
+     uZone--tools--NTPtools
      ├── README.md
-     ├── unixTime2humanReadableTime.sh
-     └── unixTime2ISO8601time.sh
+     ├── misc
+     │   └── ptw
+     │       └── ptw.c
+     ├── old
+     │   ├── dumpNTPpacket.old
+     │   └── getNTPdata.old
+     └── scripts
+         ├── NTPtime2unixTime.sh
+         ├── dumpNTPpacket.sh
+         ├── getNTPdata.sh
+         ├── unixTime2ISO8601time.sh
+         └── unixTime2humanReadableTime.sh
      
-     1 directory, 9 files ( Fri 30 Jul 2021 09:28:43 PM JST )
+     4 directories, 9 files (Fri Oct  1 08:00:52 JST 2021)
 
 * Example: 
 
