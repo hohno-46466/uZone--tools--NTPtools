@@ -5,10 +5,15 @@
 
 # Public domain
 
+exit_on_error() { echo "Error: $1 (ErrorCode = $2)"; exit $2; }
+
+[ "x$(which ptw)" = "x" ]  && exit_on_error "Prepare ptw" 9 
+[ "x$(which gawk)" = "x" ] && exit_on_error "Prepare gawk" 9 
+
 ptw sed -e 's/00*[0-9]0 *//g' -e 's/ *|.*$//g' \
-| gawk '{tf+=NF;s = s " " $0; if (tf>=48) {printf "%s\n",s; tf=0; s="";fflush()}}' \
-| gawk ' {
-  if (NF==48){
+| gawk '{tf+=NF;st=st" "$0; if(tf>=48){printf "%s\n",st; tf=0; st=""; fflush()}}' \
+| gawk '{
+  if (NF==48) {
     printf "LI = %d\nVN = %d\nMode = %d\n"\
     "stratum = %d\n"\
     "poll = %d\n"\
