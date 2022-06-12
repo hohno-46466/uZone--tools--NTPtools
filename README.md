@@ -1,6 +1,6 @@
 # GitHub/uZone--tools--NTPtools
 
-     uZone--tools--NTPtools
+     ./uZone--tools--NTPtools
      ├── README.md
      ├── misc
      │   └── ptw
