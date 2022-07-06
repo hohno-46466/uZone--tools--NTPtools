@@ -17,8 +17,8 @@ exit_on_error() { err=$1; shift; echo "Error: $@ (ErrorCode = $err)"; exit $err;
 
 NTPserver=${1-"ntp.nict.jp"}
 
-gawk 'BEGIN{printf "%c", 35; for(i=0;i<47;i++){printf "%c", 0};fflush()} {}' < /dev/null \
+gawk 'BEGIN{printf "%c", 35; for(i=0;i<47;i++){printf "%c", 0};fflush()}' < /dev/null \
 | nc -w 1 -u ${NTPserver} 123 \
-| ptw hexdump -C \
+| stdbut -oL hexdump -C \
 | head -3
 
