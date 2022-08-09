@@ -26,8 +26,8 @@
     $ getNTPdata.sh | dumpNTPpacket.sh  | grep RecTime | awk '{print $3}' | NTPtime2unixTime.sh  | unixTime2humanReadableTime.sh 
       20210717-221813
 
-Note: url = https://github.com/hohno-46466/uZone--tools--NTPtools
+Note: URL = https://github.com/hohno-46466/uZone--tools--NTPtools
 
-Note: url = git@github.com:hohno-46466/uZone--tools--NTPtools.git
+Note: URL = git@github.com:hohno-46466/uZone--tools--NTPtools.git
 
 -EOF-
