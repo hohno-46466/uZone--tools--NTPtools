@@ -1,6 +1,6 @@
 # GitHub/uZone--tools--NTPtools
 
-     ./uZone--tools--NTPtools
+    ./uZone--tools--NTPtools
      ├──  README.md
      ├──  README.md.old
      ├──  getNTPdata.sh.old
@@ -18,7 +18,7 @@
          ├──  unixTime2ISO8601time.sh
          └──  unixTime2humanReadableTime.sh
      
-     4 directories, 12 files (Sat Sep 24 17:45:54 JST 2022)
+     4 directories, 12 files (Sat Oct 15 22:54:07 JST 2022)
 
 
 * Example: 
