@@ -2,8 +2,8 @@
 
 # getNTPdata.sh
 
-# Prev update: Thu Apr  9 06:34:13 JST 2020 by @hohno_at_kuimc
-# Prev update: Fri Jul 30 19:33:46 JST 2021 by @hohno_at_kuimc
+# Prev updated: Thu Apr  9 06:34:13 JST 2020 by @hohno_at_kuimc
+# Prev updated: Fri Jul 30 19:33:46 JST 2021 by @hohno_at_kuimc
 # Last updated: Wed Jun 29 19:06:48 JST 2022 by @hohno_at_kuimc
 
 # Public domain
