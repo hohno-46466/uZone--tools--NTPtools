@@ -2,8 +2,8 @@
 
 # NTPtime2unixTime.sh
 
-# Prev updated: Thu Apr  9 06:34:13 JST 2020 by @hohno_at_kuimc
-# Last updated: Thu Jul 29 23:31:16 JST 2021 by @hohno_at_kuimc
+# Prev update: Thu Apr  9 06:34:13 JST 2020 by @hohno_at_kuimc
+# Last update: Thu Jul 29 23:31:16 JST 2021 by @hohno_at_kuimc
 
 # Public domain
 
