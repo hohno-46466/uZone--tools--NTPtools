@@ -4,21 +4,29 @@
      ├──  README.md
      ├──  README.md.old
      ├──  getNTPdata.sh.old
+     ├──  getNTPdata.sh.old.bak
      ├──  misc/
      │   └──  ptw/
      │       └──  ptw.c
      ├──  old/
      │   ├──  dumpNTPpacket.old
-     │   └──  getNTPdata.old
+     │   ├──  dumpNTPpacket.old.bak
+     │   ├──  getNTPdata.old
+     │   └──  getNTPdata.old.bak
      └──  scripts/
          ├──  NTPtime2unixTime.sh
+         ├──  NTPtime2unixTime.sh.bak
          ├──  demo629.sh
          ├──  dumpNTPpacket.sh
+         ├──  dumpNTPpacket.sh.bak
          ├──  getNTPdata.sh
+         ├──  getNTPdata.sh.bak
          ├──  unixTime2ISO8601time.sh
-         └──  unixTime2humanReadableTime.sh
+         ├──  unixTime2ISO8601time.sh.bak
+         ├──  unixTime2humanReadableTime.sh
+         └──  unixTime2humanReadableTime.sh.bak
      
-     4 directories, 12 files (Sun Nov 20 00:11:23 JST 2022)
+     4 directories, 20 files (Mon Dec 19 23:54:36 JST 2022)
 
 
 * Example: 
